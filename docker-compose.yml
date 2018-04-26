@@ -1,0 +1,9 @@
+open-mover:
+  build: .
+  command: python3 /tmp/source/start.py
+  volumes:
+    - ./source:/tmp/source
+    - ./logs:/tmp/logs
+  environment:
+    - TERM=linux
+    - TERMINFO=/etc/terminfo
