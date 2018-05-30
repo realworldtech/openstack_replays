@@ -12,11 +12,6 @@ services:
     environment:
       - TERM=linux
       - TERMINFO=/etc/terminfo
-      - STORAGE_MANAGER_IP=${STORAGE_MANAGER_IP}
-      - STORAGE_MANAGER_PORT=${STORAGE_MANAGER_PORT}
-      - STORAGE_MANAGER_USERNAME=${STORAGE_MANAGER_USERNAME}
-      - STORAGE_MANAGER_PASSWORD=${STORAGE_MANAGER_PASSWORD}
-      - SAN_PASSWORD=${SAN_PASSWORD}
 
 networks:
   openstack-scripts:
