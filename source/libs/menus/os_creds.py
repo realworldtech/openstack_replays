@@ -7,7 +7,7 @@ class AskForCredentials(npyscreen.Form):
         self.add(npyscreen.FixedText, value="It is very important that this user has full administrative access to the openstack instance")
 
         #self.add(npyscreen.TextFild, value="OS URL:")
-        self.url = self.add(npyscreen.TitleText, name="OpenStack URL:", value='https://openstack.dataretention.cloud:5000/v3')
+        self.url = self.add(npyscreen.TitleText, name="OpenStack URL:", value='https://<openstack.url>:5000/v3')
         self.domain   = self.add(npyscreen.TitleText, name="Domain:", value='Default')
         self.project  = self.add(npyscreen.TitleText, name="Default Project:", value='admin')
         self.username = self.add(npyscreen.TitleText, name="OS Username:", value='admin')

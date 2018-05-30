@@ -5,7 +5,8 @@ import signal, os
 from libs.menus.main_menu import MainMenu
 from libs.log import Logging
 
-from libs.states.backup import BackupState
+#from libs.states.backup import BackupState
+from libs.states.restore import RestoreState
 ###
 # Selection Options
 ###
@@ -16,6 +17,8 @@ def backup_state(log):
 
 def restore_state(log):
     log.info("Starting restore state option")
+    RestoreState.run(log)
+
 def migrate_state(log):
     log.info("Starting migrate state option")
 def quit(log):
@@ -31,14 +34,13 @@ def signal_handler(signal, frame):
 if __name__ == '__main__':
     signal.signal(signal.SIGINT, signal_handler)
     # Lets start the main menu.
-    l = Logging("OpenMover")
+    l = Logging("Openstack Snapshot Restore")
     l.info("Logger started")
     l.debug("Opening menu")
     selection = MainMenu.run()
     l.debug("Menu Selection was: %d" % selection)
 
     select_options = [
-            'backup_state',
             'restore_state',
             'migrate_state']
 

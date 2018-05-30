@@ -7,12 +7,13 @@ ENV PATH /usr/local/bin:$PATH
 # > At the moment, setting "LANG=C" on a Linux system *fundamentally breaks Python 3*, and that's not OK.
 ENV LANG C.UTF-8
 
-# install ca-certificates so that HTTPS works consistently
-# the other runtime dependencies for Python are installed later
-RUN apk add --no-cache ca-certificates
 
 ENV GPG_KEY 0D96DF4D4110E5C43FBFB17F2D347EA6AA65421D
 ENV PYTHON_VERSION 3.6.2
+
+ RUN   apk update \
+  &&   apk add ca-certificates wget gcc linux-headers musl-dev libc-dev\
+  &&   update-ca-certificates
 
 RUN set -ex \
 	&& apk add --no-cache --virtual .fetch-deps \
@@ -21,8 +22,8 @@ RUN set -ex \
 		tar \
 		xz \
 	\
-	&& wget -O python.tar.xz "https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz" \
-	&& wget -O python.tar.xz.asc "https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz.asc" \
+	&& wget -O python.tar.xz "http://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz" \
+	&& wget -O python.tar.xz.asc "http://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz.asc" \
 	&& export GNUPGHOME="$(mktemp -d)" \
 	&& gpg --keyserver ha.pool.sks-keyservers.net --recv-keys "$GPG_KEY" \
 	&& gpg --batch --verify python.tar.xz.asc python.tar.xz \

@@ -1,2 +1,2 @@
 #!/bin/sh
-docker-compose run open-mover python /tmp/source/start.py
+docker-compose run openstack-snapshot python /tmp/source/start.py

@@ -1,2 +1,2 @@
 #!/bin/sh
-docker-compose run open-mover python -i /tmp/source/pycon.py
+docker-compose run openstack-snapshot python -i /tmp/source/pycon.py

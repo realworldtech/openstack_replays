@@ -8,8 +8,8 @@ from cursesmenu import SelectionMenu, CursesMenu
 class MainMenu:
     @classmethod
     def run(self):
-        menu = CursesMenu("OpenMover", "Backup, Restore, Migrate OpenStack - By Real World Technologies")
-        options = ['Backup State', 'Restore State', 'Migrate State']
+        menu = CursesMenu("Openstack Toolset", "Restore OpenStack Virtual Machine Block Device from SAN - By Real World")
+        options = ['Restore State']
 
         for idx, item in enumerate(options):
             menu.append_item(SelectionItem(item, idx))
