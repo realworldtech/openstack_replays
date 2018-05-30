@@ -1,4 +1,0 @@
-curses-menu
-npyscreen
-logbook
-python-openstacksdk
