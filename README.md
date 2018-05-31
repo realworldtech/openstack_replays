@@ -34,10 +34,12 @@ There is currently no tests to run.
 
 ## Built With
 
-[Openstack SDK](https://docs.openstack.org/openstacksdk/) Python SDK for Openstack as a whole.
-[InfiniDat Munch](https://github.com/Infinidat/munch) A Munch is a Python dictionary that provides attribute-style access (a la JavaScript objects).
-[Dell Base Flock Driver](https://github.com/dellstorage/storagecenter-flocker-driver) *WARNING* I Have modified this as a number of methods and endpoints do not exist*
-[NPYScreen](http://npyscreen.readthedocs.io/) for my UI
+- [Openstack SDK](https://docs.openstack.org/openstacksdk/) Python SDK for Openstack as a whole.
+- [InfiniDat Munch](https://github.com/Infinidat/munch) "Munch" is a Python dictionary that provides attribute-style access (a la JavaScript objects).
+- [NPYScreen](http://npyscreen.readthedocs.io/) for my UI
+
+Elements of the connectivity to SC Storage Arrays have been ported from the Dell Base Flocker Driver. (Note that this project is originally distributed under the Apache 2.0 Open Source License)
+- [Dell Base Flock Driver](https://github.com/dellstorage/storagecenter-flocker-driver)
 
 ## Contributing
 
@@ -50,6 +52,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 ## Authors
 
 * **Karl Kloppenborg** - *Initial work* - [inventionlabsSydney](https://github.com/inventionlabsSydney)
+* **Andrew Yager** - *Documentation and some cleanup* - [andrewyager](https://github.com/andrewyager)
 
 See also the list of [contributors](https://github.realworld.net.au/realworldtech/openstack_replays/contributors) who participated in this project.
 
