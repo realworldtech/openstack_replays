@@ -9,7 +9,7 @@ import npyscreen, os
 
 class RestoreState:
 
-    _ALL_PROJECTS = False
+    _ALL_PROJECTS = True
 
     @classmethod
     def run(cls, log):
