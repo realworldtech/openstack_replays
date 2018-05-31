@@ -7,17 +7,6 @@ services:
     volumes:
       - ./source:/tmp/source
       - ./logs:/tmp/logs
-    networks:
-      - openstack-scripts
     environment:
       - TERM=linux
       - TERMINFO=/etc/terminfo
-
-networks:
-  openstack-scripts:
-    external:
-      name: openstack-scripts-external
-
-  ###
-  # Remember first time: docker network create openstack-scripts-external
-  ###

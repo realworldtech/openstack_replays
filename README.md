@@ -17,13 +17,7 @@ Docker-compose >= 1.20.0
 
 ### Installing
 
-Before running docker-compose build we need to create the network in docker.
-
-```
-docker network create openstack-scripts-external
-```
-
-Now build the app
+Build the app
 ```
 docker-compose build
 ```
